@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculadora de IMC</h1>
+        <section class="conteudo">
+            <form action="get">
+                <p>
+                    <label for="nome">Nome</label> <br>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Carlos">         
+                </p>
+                <p>
+                    <label for="idade">Idade</label> <br>
+                    <input type="number" name="idade" id="idade" placeholder="Ex: 20 anos" required>
+                </p>
+                <p>
+                    <label for="peso">Peso</label> <br>
+                    <input type="number" name="peso" id="peso" placeholder="Ex: 80 Kg" required step=".01">
+                </p>
+                <p>
+                    <label for="altura">Altura</label> <br>
+                    <input type="number" name="altura" id="altura"
+                    placeholder="Ex: 1.70" required step=".01">
+                </p>
+                <button id="btnEnviar" type="submit">Enviar</button>
+                <button id="btnLimpar" type="reset">Limpar</button>
+            </form>
+        </section>
+        <div class="mostrarResultado">
+            <label for="imc">IMC</label>
+            <input type="number" name="imc" id="resultadoImc" value="0.0" disabled>
+            <div class="aviso"></div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</html>

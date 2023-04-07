@@ -1,0 +1,114 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main {
+    height: 550px;
+    padding: 25px;
+    background: linear-gradient(to top, rgb(255, 139, 255), rgb(255, 166, 0));
+    border-radius: 20px;
+    position: relative;
+    
+}
+
+/*----------------------------------------------------*/
+/*Animação da borda*/
+main::before, main::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2.5%;
+    left: -3%;
+    height: calc(100% + 25px);
+    width: calc(100% + 25px);
+    background: linear-gradient(45deg, violet, lightpink,rgb(155, 0, 155),lightpink ,violet);
+    background-size: 300%;
+    border-radius: 20px;
+    animation: borderAnimate 8s linear infinite;
+}
+main::after {
+    filter: blur(50px);
+}
+
+@keyframes borderAnimate {
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
+/*----------------------------------------------------*/
+
+h1 {
+    margin: 20px;
+    
+}
+
+section.conteudo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 25px;
+    margin-bottom: 0px;
+    line-height: 25px;
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+form {
+    padding: 10px;
+}
+
+label{
+    cursor: pointer;
+}
+
+input{
+    height: 30px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button{
+    height: 30px;
+    width: 50px;
+    border-radius: 3px;
+    border: none;
+    margin: 20px 0px;
+    cursor: pointer;
+    background-color: white;
+}
+
+button:hover{
+    background: linear-gradient(to bottom, lightpink, violet);
+    
+}
+
+input#resultadoImc{
+    width: 80px;
+    background-color: white;
+    
+}
+.mostrarResultado {
+    text-align: center;
+    font-weight: bold;   
+}
+
